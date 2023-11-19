@@ -1,0 +1,165 @@
+<!-- Course: SENG 513 -->
+<!-- Date: NOV 18, 2023 -->
+<!-- Assignment 3 -->
+<!-- Name: Angi Shi -->
+<!-- UCID: 30117768 -->
+
+<!-- This file is the 4x4 dimension of dots and boxes game -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dots and Boxes</title>
+        <link rel="stylesheet" href="a2_4by4.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    </head>
+
+    <header class="page-container">
+        <h1 class="name">Dots and Boxes</h1>
+    </header>
+
+    <body>
+        <div class="game-container">
+
+            <!-- create the squares -->
+            <div class="square-layout">
+                <div class="square" id="s_1_4"></div>
+                <div class="square" id="s_2_4"></div>
+                <div class="square" id="s_3_4"></div>
+                <div class="square" id="s_4_4"></div>
+
+                <div class="square" id="s_1_3"></div>
+                <div class="square" id="s_2_3"></div>
+                <div class="square" id="s_3_3"></div>
+                <div class="square" id="s_4_3"></div>
+
+                <div class="square" id="s_1_2"></div>
+                <div class="square" id="s_2_2"></div>
+                <div class="square" id="s_3_2"></div>
+                <div class="square" id="s_4_2"></div>
+
+                <div class="square" id="s_1_1"></div>
+                <div class="square" id="s_2_1"></div>
+                <div class="square" id="s_3_1"></div>
+                <div class="square" id="s_4_1"></div>
+            </div>
+
+            <!-- create the dots -->
+            <div class="grid">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <!-- create lines connecting the dots -->
+            <div class="grid-lines">
+                <div class="vertical-line" id="v_4_3"></div>
+                <div class="horizontal-line" id="h_4_14"></div>
+                <div class="vertical-line" id="v_14_13"></div>
+                <div class="horizontal-line" id="h_14_24"></div>
+                <div class="vertical-line" id="v_24_23"></div>
+                <div class="horizontal-line" id="h_24_34"></div>
+                <div class="vertical-line" id="v_34_33"></div>
+                <div class="horizontal-line" id="h_34_44"></div>
+                <div class="vertical-line" id="v_44_43"></div>
+                
+                <div class="vertical-line" id="v_3_2"></div>
+                <div class="horizontal-line" id="h_3_13"></div>
+                <div class="vertical-line" id="v_13_12"></div>
+                <div class="horizontal-line" id="h_13_23"></div>
+                <div class="vertical-line" id="v_23_22"></div>
+                <div class="horizontal-line" id="h_23_33"></div>
+                <div class="vertical-line" id="v_33_32"></div>
+                <div class="horizontal-line" id="h_33_43"></div>
+                <div class="vertical-line" id="v_43_42"></div>
+
+                <div class="vertical-line" id="v_2_1"></div>
+                <div class="horizontal-line" id="h_2_12"></div>
+                <div class="vertical-line" id="v_12_11"></div>
+                <div class="horizontal-line" id="h_12_22"></div>
+                <div class="vertical-line" id="v_22_21"></div>
+                <div class="horizontal-line" id="h_22_32"></div>
+                <div class="vertical-line" id="v_32_31"></div>
+                <div class="horizontal-line" id="h_32_42"></div>
+                <div class="vertical-line" id="v_42_41"></div>
+
+                <div class="vertical-line" id="v_1_0"></div>
+                <div class="horizontal-line" id="h_1_11"></div>
+                <div class="vertical-line" id="v_11_10"></div>
+                <div class="horizontal-line" id="h_11_21"></div>
+                <div class="vertical-line" id="v_21_20"></div>
+                <div class="horizontal-line" id="h_21_31"></div>
+                <div class="vertical-line" id="v_31_30"></div>
+                <div class="horizontal-line" id="h_31_41"></div>
+                <div class="vertical-line" id="v_41_40"></div>
+
+                <div class="vertical-place-holder"></div>
+                <div class="horizontal-line" id="h_0_10"></div>
+                <div class="vertical-place-holder"></div>
+                <div class="horizontal-line" id="h_10_20"></div>
+                <div class="vertical-place-holder"></div>
+                <div class="horizontal-line" id="h_20_30"></div>
+                <div class="vertical-place-holder"></div>
+                <div class="horizontal-line" id="h_30_40"></div>
+                <div class="vertical-place-holder"></div>
+            </div>
+
+            <!-- player 1 score -->
+            <div class="player1-container">
+                <div class="player1-score" id="p1score"></div>
+                <div class="player1">Player 1</div>
+            </div>
+
+            <!-- player 2 score -->
+            <div class="player2-container">
+                <div class="player2-score" id="p2score"></div>
+                <div class="player2">Player 2</div>
+            </div>
+
+            <!-- keep track of whose turn -->
+            <div class="player1-turn" id="p1turn">Player 1's Turn!</div>
+            <div class="player2-turn" id="p2turn">Player 2's Turn!</div>
+
+            <!-- who won -->
+            <div class="player1-wins" id="p1win">Player 1 Wins!</div>
+            <div class="player2-wins" id="p2win">Player 2 Wins!</div>
+            <div class="tie" id="tie">Tie!</div>
+
+        </div>
+
+        <div class="button-container">
+            <button onclick="goToPage('a2startPage.html')"><img class="icon" src="home_icon.jpeg"></button>
+            <button onclick="goToPage('a2_4by4.html')"><img class="icon" src="restart_icon.jpeg"></button>
+        </div>
+
+        <script src="a3.js"></script>
+    </body>

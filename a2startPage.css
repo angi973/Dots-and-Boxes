@@ -1,0 +1,53 @@
+/* Course: SENG 513 */
+/* Date: NOV 18, 2023 */
+/* Assignment 3 */
+/* Name: Angi Shi */
+/* UCID: 30117768 */
+
+/* This file is the css styling for dots and boxes start page */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: peachpuff;
+    font-family: 'Rubik Spray Paint';
+}
+
+/* design for name of game */
+.name-container {
+    width: 100%;
+    height: 36vh;
+    display: inline-flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.name {
+    color: lightcoral;
+    font-size: 90px;
+}
+
+/* button design */
+.button-container {
+    width: 100%;
+    height: 64vh;
+    display: inline-block;
+    align-items: center; 
+    justify-content: center;
+}
+
+button {
+    display: block;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin: 40px auto;
+    background-color: rgb(53, 96, 136);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
